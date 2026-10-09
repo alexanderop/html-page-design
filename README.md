@@ -12,21 +12,15 @@ It is a local take on the design guidance Claude Code uses for claude.ai Artifac
 
 ## Install
 
-From a local clone:
-
 ```bash
-claude plugin marketplace add ~/Projects/active/html-page-design
+claude plugin marketplace add alexanderop/html-page-design
 ```
 
 ```bash
 claude plugin install html-page-design@html-page-design
 ```
 
-From GitHub (private repo works when `gh` or git can already reach it):
-
-```bash
-claude plugin marketplace add alexanderop/html-page-design
-```
+To customise it, clone the repo and add your clone instead: `claude plugin marketplace add /path/to/html-page-design`.
 
 Then ask for a page ("make an HTML page that explains our deploy pipeline") or call `/html-page-design:html-page-design`.
 
