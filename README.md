@@ -30,6 +30,16 @@ claude plugin marketplace add alexanderop/html-page-design
 
 Then ask for a page ("make an HTML page that explains our deploy pipeline") or call `/html-page-design:html-page-design`.
 
+### When the built-in Artifact tool is also present
+
+In a Claude Code session signed in to claude.ai, the built-in `Artifact` tool tells Claude to start every page with its own quickstart, so a plain "make a page" request goes there instead of to this skill. Asking for "a local HTML file" is not enough either: in testing, Claude then wrote the file directly without loading any skill. In that setup, call it by name:
+
+```
+/html-page-design:html-page-design <what you want>
+```
+
+Without the Artifact tool (no claude.ai login, API key, or `--disallowedTools Artifact`), Claude picks this skill on its own.
+
 ## Use the lint by hand
 
 ```bash

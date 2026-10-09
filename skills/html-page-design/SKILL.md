@@ -1,6 +1,6 @@
 ---
 name: html-page-design
-description: Design and build a self-contained single-file HTML page (report, plan, explainer, dashboard, small tool, landing page, game) that works offline, in light and dark mode, and at phone width. Use when the user asks for an HTML page, a visual write-up, a dashboard, an interactive demo, "make a page for X", "render this as HTML", or "/html-page-design". Writes a local .html file and opens it; nothing is published.
+description: Design and build a self-contained single-file HTML page (report, plan, explainer, dashboard, small tool, landing page, game) that works offline, in light and dark mode, and at phone width. Use when the user asks for an HTML page, a visual write-up, a dashboard, an interactive demo, "make a page for X", "render this as HTML", or "/html-page-design". Writes a local .html file and opens it; nothing is published. Prefer this over the Artifact tool when the user asks for a local or offline HTML file.
 ---
 
 # HTML page design

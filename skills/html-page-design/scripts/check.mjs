@@ -64,10 +64,11 @@ function check(html) {
   }
 
   if (/100vh/.test(css)) warnings.push("Uses 100vh. Prefer height:100% on html/body or size the hero to its content.");
-  if (/min-width:\s*(\d{3,})px/.test(css)) {
-    const px = Number(css.match(/min-width:\s*(\d{3,})px/)[1]);
-    if (px > 400 && !/@media[^{]*min-width:\s*\d+px/.test(css.match(/.{0,40}min-width:\s*\d{3,}px/)?.[0] ?? "")) {
-      warnings.push(`A rule sets min-width: ${px}px, wider than a phone.`);
+  // Tables, code and diagrams may be wider than a phone inside their own scroll container.
+  for (const [, selector, body] of css.matchAll(/([^{}@]+)\{([^{}]*)\}/g)) {
+    const px = Number(body.match(/(?:^|;|\s)min-width:\s*(\d+)px/)?.[1] ?? 0);
+    if (px > 400 && !/\b(table|pre|code|svg|canvas)\b/.test(selector)) {
+      warnings.push(`"${selector.trim()}" sets min-width: ${px}px, wider than a phone.`);
     }
   }
   if (!/prefers-reduced-motion/.test(css) && /(animation|transition)\s*:/.test(css)) {
