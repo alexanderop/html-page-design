@@ -1,0 +1,8 @@
+{
+  "name": "html-page-design",
+  "version": "0.1.0",
+  "description": "Design and build self-contained, theme-aware single-file HTML pages locally. No claude.ai login, no publishing step.",
+  "author": { "name": "Alexander Opalic" },
+  "license": "MIT",
+  "keywords": ["html", "design", "artifact", "single-file", "dark-mode"]
+}

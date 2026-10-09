@@ -1,0 +1,6 @@
+{
+  "name": "html-page-design",
+  "owner": { "name": "Alexander Opalic" },
+  "metadata": { "description": "Local single-file HTML page design for Claude Code." },
+  "plugins": [{ "name": "html-page-design", "source": "./" }]
+}
